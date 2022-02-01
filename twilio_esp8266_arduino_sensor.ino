@@ -15,8 +15,8 @@
 #define USE_SERIAL 1
 
 // Your network SSID and password
-const char* ssid = "The Bakery Empire";
-const char* password = "Bandpractice1#";
+const char* ssid = "***";
+const char* password = "***";
 
 // Find the api.twilio.com SHA1 fingerprint, this one was valid as 
 // of July 2020. This will change, please see 
@@ -31,17 +31,17 @@ const char fingerprint[] = "0E 15 35 A9 DD DB 63 DF CE D3 02 2E A8 6A 5A E0 28 9
 // If this device is deployed in the field you should only deploy a revocable
 // key. This code is only suitable for prototyping or if you retain physical
 // control of the installation.
-const char* account_sid = "ACc63ec7b284f31704f44b73f11d57c380";
-const char* auth_token = "8a343af79d42220c1ca847678407ca32";
+const char* account_sid = "***";
+const char* auth_token = "***";
 
 // Details for the SMS we'll send with Twilio.  Should be a number you own 
 // (check the console, link above).
-String to_number    = "+12567928244";
-String from_number = "+17755263988";
+String to_number    = "+***";
+String from_number = "+***";
 String message_body    = "Hello from Twilio and the ESP8266!";
 
 // The 'authorized number' to text the ESP8266 for our example
-String master_number    = "+12567928244";
+String master_number    = "+***";
 
 // Global twilio objects
 Twilio *twilio;
