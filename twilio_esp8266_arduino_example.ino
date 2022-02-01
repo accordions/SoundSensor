@@ -15,14 +15,14 @@
 #define USE_SERIAL 1
 
 // Your network SSID and password
-const char* ssid = "The_Sailboat";
-const char* password = "club848!";
+const char* ssid = "The Bakery Empire";
+const char* password = "Bandpractice1#";
 
 // Find the api.twilio.com SHA1 fingerprint, this one was valid as 
 // of July 2020. This will change, please see 
 // https://www.twilio.com/docs/sms/tutorials/how-to-send-sms-messages-esp8266-cpp
 // to see how to update the fingerprint.
-const char fingerprint[] = "BC B0 1A 32 80 5D E6 E4 A2 29 66 2B 08 C8 E0 4C 45 29 3F D0";
+const char fingerprint[] = "0E 15 35 A9 DD DB 63 DF CE D3 02 2E A8 6A 5A E0 28 9B FF 26";
 
 // Twilio account specific details, from https://twilio.com/console
 // Please see the article: 
@@ -31,21 +31,17 @@ const char fingerprint[] = "BC B0 1A 32 80 5D E6 E4 A2 29 66 2B 08 C8 E0 4C 45 2
 // If this device is deployed in the field you should only deploy a revocable
 // key. This code is only suitable for prototyping or if you retain physical
 // control of the installation.
-const char* account_sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-const char* auth_token = "Your AUTH TOKEN";
+const char* account_sid = "ACc63ec7b284f31704f44b73f11d57c380";
+const char* auth_token = "8a343af79d42220c1ca847678407ca32";
 
 // Details for the SMS we'll send with Twilio.  Should be a number you own 
 // (check the console, link above).
-String to_number    = "+18005551212";
-String from_number = "+18005551212";
+String to_number    = "+12567928244";
+String from_number = "+17755263988";
 String message_body    = "Hello from Twilio and the ESP8266!";
 
 // The 'authorized number' to text the ESP8266 for our example
-String master_number    = "+18005551212";
-
-// Optional - a url to an image.  See 'MediaUrl' here: 
-// https://www.twilio.com/docs/api/rest/sending-messages
-String media_url = "";
+String master_number    = "+12567928244";
 
 // Global twilio objects
 Twilio *twilio;
@@ -166,8 +162,7 @@ void setup() {
                 to_number,
                 from_number,
                 message_body,
-                response,
-                media_url
+                response
         );
 
         // Set up a route to /message which will be the webhook url
